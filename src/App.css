@@ -1,0 +1,11 @@
+body {
+    font-family: 'DM Sans', sans-serif !important;
+     padding-top: 0;
+}
+.heading {
+    font-family: 'Archivo', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
