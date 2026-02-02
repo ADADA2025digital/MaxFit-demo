@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { pageBannerData } from "../Constants/Data";
+import { pageBannerData } from "../constants/Data";
 import AboutUs from "../components/AboutUs";
 import Banner from "../components/Banner";
 import ScrollingInfo from "../components/ScrollingInfo";
