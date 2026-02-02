@@ -174,8 +174,8 @@ const Home = () => {
           <div className="position-absolute top-0 start-0 w-100 h-100 hero-overlay"></div>
 
           {/* Hero Content */}
-          <div className=" position-relative text-center text-white d-flex flex-column align-items-center justify-content-center h-100 px-3 px-md-0 ">
-            <div className="pb-0 pb-md-5 pt-0 pt-md-5">
+          <div className="position-relative text-center text-white d-flex flex-column align-items-center justify-content-center h-100 px-3 px-md-0 pt-0 pt-lg-5 mt-0 mt-md-5">
+            <div className="pb-0 pb-md-5 pt-0 pt-md-5 mt-0 mt-md-5">
               {/* Welcome Badge */}
               <motion.div
                 initial={{ opacity: 0, y: -30 }}
