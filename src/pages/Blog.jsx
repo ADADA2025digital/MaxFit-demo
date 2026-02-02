@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { pageBannerData, blogData } from "../Constants/Data";
+import { pageBannerData, blogData } from "../constants/Data";
 import Banner from "../components/Banner";
 import ScrollingInfo from "../components/ScrollingInfo";
 import NewsBlogCard from "../components/NewsBlogCard";
