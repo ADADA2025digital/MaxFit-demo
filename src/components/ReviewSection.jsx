@@ -7,7 +7,7 @@ const ReviewSection = () => {
   const [isDesktop, setIsDesktop] = useState(
     typeof window !== "undefined"
       ? window.matchMedia("(min-width: 992px)").matches
-      : false
+      : false,
   );
   const trackRef = useRef(null);
   const containerRef = useRef(null);
@@ -87,7 +87,8 @@ const ReviewSection = () => {
 
         {/* Custom slider */}
         <div className="review-carousel overflow-hidden" ref={containerRef}>
-          <div className="d-flex"
+          <div
+            className="d-flex"
             ref={trackRef}
             style={{
               gap: `${GAP_PX}px`,
@@ -108,24 +109,36 @@ const ReviewSection = () => {
           </div>
 
           {/* Dots */}
-          <div className="d-flex justify-content-center mt-5 gap-2">
-            {reviewData.map((_, dotIdx) => (
-              <button
-                key={dotIdx}
-                onClick={() => setSlideIndex(dotIdx)}
-                aria-label={`Slide ${dotIdx + 1}`}
-                className={`border-0 rounded-circle ${
-                  slideIndex % reviewData.length === dotIdx
-                    ? "back-dark"
-                    : "back-light"
-                }`}
-                style={{
-                  width: 12,
-                  height: 12,
-                  opacity: slideIndex % reviewData.length === dotIdx ? 1 : 0.35,
-                }}
-              />
-            ))}
+          <div className="d-flex justify-content-center mt-5">
+            {reviewData.map((_, dotIdx) => {
+              const active = slideIndex % reviewData.length === dotIdx;
+
+              return (
+                <button
+                  key={dotIdx}
+                  onClick={() => setSlideIndex(dotIdx)}
+                  aria-label={`Slide ${dotIdx + 1}`}
+                  aria-current={active ? "true" : undefined}
+                  className="border-0 rounded-circle bg-transparent"
+                  style={{
+                    width: 24,
+                    height: 44,
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <span
+                    className={`rounded-circle ${active ? "back-dark" : "back-light"}`}
+                    style={{
+                      width: 12,
+                      opacity: active ? 1 : 0.35,
+                      display: "inline-block",
+                    }}
+                  />
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>
