@@ -155,7 +155,7 @@ const About = () => {
         <AboutUs />
 
         {/* more about therapist */}
-        <section>
+        {/* <section>
           <div className="container mb-5">
             <div className="row align-items-start">
               <h2 className="fw-bold mb-3">About Your Physiotherapist</h2>
@@ -232,7 +232,7 @@ const About = () => {
               </p>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Statistics Banner */}
         <StatisticsBanner />
@@ -382,7 +382,7 @@ const About = () => {
                         ) : (
                           <ServiceCard
                             imageSrc={service.img}
-                            title={service.title}
+                            title={service.title} 
                             description={service.desc}
                           />
                         )}
@@ -407,7 +407,7 @@ const About = () => {
             </div>
 
             {/* Desktop CTA Box */}
-            <motion.div
+            {/* <motion.div
               className="overflow-hidden d-flex custom-border rounded-4 p-4 mt-4 d-none d-md-flex"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -436,7 +436,7 @@ const About = () => {
                   ariaLabel="Explore physiotherapy services"
                 />
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </section>
 

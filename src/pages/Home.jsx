@@ -88,9 +88,14 @@ const Home = () => {
       "Book your appointment today and receive personalised, evidence-based care focused on long-term results.",
   };
 
-  // Desktop layout: row1 = first 4, row2 = next 2 + CTA
-  const desktopRow1 = services.slice(0, 4);
-  const desktopRow2 = services.slice(4, 6);
+  // Desktop layout: row1 = first 4, row2 = next 4, row3 = last 1 + CTA
+  const desktopRow1 = services.slice(0, 4); // First 4 services
+  const desktopRow2 = services.slice(4, 8); // Next 4 services
+  const desktopRow3Services = services.slice(8, 9); // Last service (9th)
+  const desktopRow3 = {
+    service: desktopRow3Services[0], // The 9th service
+    cta: ctaCard, // The CTA card
+  };
 
   // Mobile carousel: all services + CTA
   const mobileSlides = [...services, ctaCard];
@@ -338,7 +343,7 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Desktop cards row 1 */}
+            {/* Desktop cards - Row 1 (first 4 services) */}
             <div className="row g-4 mb-2 d-none d-md-flex">
               {desktopRow1.map((service, index) => (
                 <motion.div
@@ -353,12 +358,13 @@ const Home = () => {
                     imageSrc={service.img}
                     title={service.title}
                     description={service.description}
+                    hoverDescription={service.hoverDescription} // Add this line
                   />
                 </motion.div>
               ))}
             </div>
 
-            {/* Desktop cards row 2 */}
+            {/* Desktop cards - Row 2 (next 4 services) */}
             <div className="row g-4 mt-3 d-none d-md-flex">
               {desktopRow2.map((service, index) => (
                 <motion.div
@@ -373,11 +379,34 @@ const Home = () => {
                     imageSrc={service.img}
                     title={service.title}
                     description={service.description}
+                    hoverDescription={service.hoverDescription} // Add this line
                   />
                 </motion.div>
               ))}
+            </div>
 
-              {/* Last wide CTA card */}
+            {/* Desktop cards - Row 3 (last service + CTA card) */}
+            <div className="row g-4 mt-3 d-none d-md-flex">
+              {/* Last service card */}
+              {desktopRow3.service && (
+                <motion.div
+                  key={desktopRow3.service.title}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="col-12 col-sm-6 col-lg-3"
+                >
+                  <ServiceCard
+                    imageSrc={desktopRow3.service.img}
+                    title={desktopRow3.service.title}
+                    description={desktopRow3.service.description}
+                    hoverDescription={desktopRow3.service.hoverDescription}
+                  />
+                </motion.div>
+              )}
+
+              {/* Wide CTA card */}
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -386,9 +415,10 @@ const Home = () => {
                 className="col-12 col-lg-6"
               >
                 <ServiceCard
-                  imageSrc={ctaCard.img}
-                  title={ctaCard.title}
-                  description={ctaCard.description}
+                  imageSrc={desktopRow3.cta.img}
+                  title={desktopRow3.cta.title}
+                  description={desktopRow3.cta.description}
+                  hoverDescription={desktopRow3.cta.hoverDescription}
                   center={true}
                   customButton={
                     <CustomButton
@@ -421,6 +451,7 @@ const Home = () => {
                           imageSrc={service.img}
                           title={service.title}
                           description={service.description}
+                          hoverDescription={service.hoverDescription}
                           center={isCTA}
                           customButton={
                             isCTA && (

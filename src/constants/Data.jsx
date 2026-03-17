@@ -94,7 +94,7 @@ export const statisticsData = [
   {
     id: 3,
     icon: iconSolutionCounter3,
-    targetValue: 200,
+    targetValue: 300,
     suffix: "+",
     label: "Patients Supported",
   },
@@ -110,7 +110,7 @@ export const statisticsBannerData = [
   },
   {
     id: 2,
-    number: "200+",
+    number: "300+",
     label: "Patients Supported",
     icon: iconSolutionCounter2,
   },
@@ -324,8 +324,7 @@ export const reviewData = [
   },
   {
     id: 9,
-    reviewText:
-      "Best service and helped me a lot",
+    reviewText: "Best service and helped me a lot",
     profileImg: author,
     name: "Rupak Raj",
     work: "",
@@ -605,37 +604,72 @@ export const services = [
     img: servicicon1,
     title: "Manual Therapy",
     description:
-      "Hands-on treatment to relieve pain, reduce stiffness, and restore movement for faster, long-lasting recovery.",
+      "Hands-on treatment designed to relieve pain, reduce stiffness, and improve movement.",
+    hoverDescription:
+      "Manual therapy techniques help restore joint and muscle mobility, enhance circulation, and support faster, long-lasting recovery. This treatment is ideal for back and neck pain, muscle tightness and tension, sports injuries and posture-related discomfort.",
   },
   {
     img: servicicon2,
     title: "Chronic Pain Management",
     description:
-      "Gentle, evidence-based care to reduce flare-ups, improve mobility, and help you regain confidence in daily life.",
+      "Chronic pain management focuses on supporting individuals who experience ongoing pain for more than three months.",
+    hoverDescription:
+      "It involves understanding the factors that contribute to persistent pain and using evidence-based techniques such as education, gentle manual therapy, tailored exercise programs, pacing strategies, and lifestyle modifications. The aim is to calm the sensitised nervous system, improve mobility and strength, reduce pain flare-ups, and enhance overall quality of life.",
   },
   {
     img: servicicon3,
-    title: "Acute Pain & Injury Care",
-    description:
-      "Fast, effective support for recent injuries to reduce pain, manage inflammation, and prevent long-term issues.",
+    title: "Acute Pain",
+    description: "Fast, effective care for sudden injuries and recent pain.",
+    hoverDescription:
+      "Acute pain often develops suddenly after a sprain, strain, fall, or unexpected movement, and early treatment can significantly speed up recovery. Physiotherapy focuses on reducing pain, controlling inflammation, and restoring normal movement safely from the very beginning. Through hands-on techniques, gentle mobility exercises, and personalised guidance, treatment supports faster healing and helps prevent a short-term injury from developing into a long-term problem. Early physiotherapy leads to quicker recovery and better overall outcomes.",
   },
   {
     img: servicicon4,
     title: "Exercise Therapy & Rehabilitation",
     description:
-      "Personalised exercise programs to build strength, restore function, and support safe, lasting recovery.",
+      "Exercise therapy plays a vital role in long-term recovery by helping rebuild strength, restore movement, and prevent future injuries.",
+    hoverDescription:
+      "Rehabilitation programs are tailored to your specific condition, focusing on improving mobility, strength, balance, coordination, and overall functional ability. Whether you’re recovering from an injury, managing chronic pain, rehabilitating after surgery, or simply aiming to move better in daily life, guided exercises ensure safe, effective progress. Personalised rehabilitation supports stronger recovery, better results, and long-lasting confidence in your movement.",
   },
   {
     img: servicicon5,
     title: "Posture & Movement Retraining",
     description:
-      "Improve alignment and movement habits to reduce strain, prevent recurring pain, and move more efficiently.",
+      "Poor posture and inefficient movement patterns can place unnecessary stress on muscles and joints, often leading to ongoing pain, stiffness, and recurring injuries",
+    hoverDescription:
+      "Posture and movement retraining focuses on assessing how your body moves during everyday tasks—such as sitting, walking, lifting, and bending—and identifying habits that may be contributing to discomfort. Through guided correction, strengthening, and movement re-education, this approach helps improve alignment, reduce strain, and build healthier long-term movement patterns.",
   },
   {
     img: servicicon6,
+    title: "Injury Prevention & Education",
+    description:
+      "Injury prevention focuses on helping you stay active, move safely, and reduce the risk of setbacks.",
+    hoverDescription:
+      "Through personalised education, movement guidance, and practical strategies, you learn how your body moves and what you can do to keep it strong and resilient. This includes advice on posture, safe lifting techniques, workplace ergonomics, warm-up routines, and everyday habits that protect your muscles and joints. By recognising early signs of overload and understanding how to move well, you can reduce future injury risk and maintain long-term health.",
+  },
+  {
+    img: servicicon3,
     title: "Post-Surgical Rehabilitation",
     description:
-      "Structured rehab to rebuild strength, mobility, and confidence after surgery-at a pace that suits you.",
+      "Post-surgical rehabilitation is essential for restoring strength, mobility, and confidence after an operation.",
+    hoverDescription:
+      "A structured, personalised plan helps guide each stage of healing by reducing pain, improving flexibility, and gradually rebuilding function. Gentle exercises, manual therapy, movement retraining, and ongoing education work together to support a smooth and effective return to daily activities.",
+  },
+  {
+    img: servicicon5,
+    title: "Balance, Stability & Fall Prevention",
+    description:
+      "As strength, coordination, and joint mobility change over time, balance can become more challenging—raising the risk of falls.",
+    hoverDescription:
+      "Balance and stability training helps improve steadiness, confidence, and safety in everyday movement. Through targeted strengthening exercises, gait and balance retraining, and practical home strategies, this approach enhances your ability to move independently and securely. Improved balance supports greater confidence and quality of life",
+  },
+  {
+    img: servicicon6,
+    title: "Mobility & Functional Training",
+    description:
+      "Mobility and functional training enhance the way your body moves during real-life activities such as walking, bending, reaching, climbing stairs, or standing up from a chair.",
+    hoverDescription:
+      "This approach aims to improve joint mobility, muscle control, coordination, and overall physical function. Through targeted exercises and movement practice, you can reduce stiffness, restore natural movement patterns, and move with greater ease. This training is ideal for older adults, those recovering from injury or surgery, and anyone wanting to improve everyday movement and independence.",
   },
 ];
 

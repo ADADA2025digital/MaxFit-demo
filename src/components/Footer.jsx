@@ -215,7 +215,7 @@ const Footer = () => {
                   {" "}
                   Web solution by{" "}
                   <a
-                    href="https://addadigital.com"
+                    href="https://adada.com.au/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-decoration-none text-white"

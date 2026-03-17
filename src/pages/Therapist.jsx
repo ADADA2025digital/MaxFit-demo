@@ -193,7 +193,7 @@ const Therapist = () => {
         </section>
 
         {/* Personal Info Section */}
-        <section className="py-5">
+        {/* <section className="py-5">
           <div className="container">
             <div className="row g-5">
               <motion.div
@@ -346,14 +346,14 @@ const Therapist = () => {
               </motion.div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* FAQ section */}
-<section className="py-5 position-relative about-section">
-  <div className="container position-relative z-1">
-    <FAQAccordion items={faqData} />
-  </div>
-</section>
+        <section className="py-5 position-relative about-section">
+          <div className="container position-relative z-1">
+            <FAQAccordion items={faqData} />
+          </div>
+        </section>
 
         {/* Review */}
         <ReviewSection />
